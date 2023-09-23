@@ -6,7 +6,7 @@ $ docker-compose up --build
 
 ### ab testing
 
-ab tool is benchmarking tool with `http/1.0``
+ab tool is benchmarking tool with `http/1.0`
 
 ab full name is Apache Bench
 
