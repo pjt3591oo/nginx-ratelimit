@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  server1:
+    build: 
+      context: .
+      dockerfile: dockerfile
+    container_name: server1
+    restart: always
+
+  nginx:
+    image: nginx:1.21.5-alpine
+    ports:
+      - 8080:8080
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    container_name: web.server.com
+    depends_on:
+      - server1
+    restart: always
